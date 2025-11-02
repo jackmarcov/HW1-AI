@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnAds Tourism Mobility Insights</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-map-marked-alt"></i>
+                <span>OnAds Tourism Insights</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#dashboard" class="nav-link active">Dashboard</a>
+                <a href="#analytics" class="nav-link">Analytics</a>
+                <a href="#reports" class="nav-link">Reports</a>
+                <a href="#data" class="nav-link">Data Upload</a>
+            </div>
+            <div class="nav-actions">
+                <button id="btn-login" class="btn-secondary">Login</button>
+                <button id="btn-get-started" class="btn-primary">Get Started</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Transform Tourism Data into Actionable Insights</h1>
+                <p>Analyze real-time GPS data from Panama's airport taxis to understand tourist movement patterns and optimize your business strategy.</p>
+                <div class="hero-actions">
+                    <button class="btn-primary btn-large">Start Free Trial</button>
+                    <button class="btn-outline btn-large">View Demo</button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">2.5M+</span>
+                        <span class="stat-label">Annual Tourists</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">95%</span>
+                        <span class="stat-label">Data Accuracy</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">30s</span>
+                        <span class="stat-label">Report Generation</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="dashboard-preview">
+                    <div class="preview-header">
+                        <div class="preview-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <span class="preview-title">Tourism Heatmap - Panama City</span>
+                    </div>
+                    <div class="preview-content">
+                        <div class="map-container">
+                            <div class="map-heatmap"></div>
+                            <div class="map-markers">
+                                <div class="marker marker-1"></div>
+                                <div class="marker marker-2"></div>
+                                <div class="marker marker-3"></div>
+                                <div class="marker marker-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Powerful Analytics for Tourism Intelligence</h2>
+                <p>Turn raw GPS data into strategic insights that drive business growth</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-upload"></i>
+                    </div>
+                    <h3>Easy Data Upload</h3>
+                    <p>Upload CSV files or connect real-time data feeds from taxi companies with automated processing.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Interactive Heatmaps</h3>
+                    <p>Visualize tourist density patterns across Panama City with time-based filtering and zoom capabilities.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Route Analytics</h3>
+                    <p>Analyze popular tourist routes, peak hours, and destination patterns to optimize your strategy.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>Automated Reports</h3>
+                    <p>Generate professional PDF reports with insights and recommendations for stakeholders and clients.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Real-time Updates</h3>
+                    <p>Get insights updated in real-time as new taxi trip data becomes available.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Privacy Compliant</h3>
+                    <p>Anonymized data processing ensures tourist privacy while maintaining analytical value.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="dashboard page-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Live Tourism Dashboard</h2>
+                <p>Real-time insights into tourist movement patterns</p>
+            </div>
+            <div class="dashboard-grid">
+                <div class="dashboard-card main-card">
+                    <div class="card-header">
+                        <h3>Tourist Movement Heatmap</h3>
+                        <div class="card-controls">
+                            <select class="time-filter">
+                                <option>Last 24 Hours</option>
+                                <option>Last 7 Days</option>
+                                <option>Last 30 Days</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <div class="map-placeholder">
+                            <i class="fas fa-map"></i>
+                            <p>Interactive heatmap will load here</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Top Destinations</h3>
+                    </div>
+                    <div class="destinations-list">
+                        <div class="destination-item">
+                            <div class="destination-rank">1</div>
+                            <div class="destination-info">
+                                <span class="destination-name">Casco Viejo</span>
+                                <span class="destination-count">1,247 visits</span>
+                            </div>
+                            <div class="destination-trend">
+                                <i class="fas fa-arrow-up"></i>
+                                <span>+12%</span>
+                            </div>
+                        </div>
+                        <div class="destination-item">
+                            <div class="destination-rank">2</div>
+                            <div class="destination-info">
+                                <span class="destination-name">Multiplaza Mall</span>
+                                <span class="destination-count">892 visits</span>
+                            </div>
+                            <div class="destination-trend">
+                                <i class="fas fa-arrow-up"></i>
+                                <span>+8%</span>
+                            </div>
+                        </div>
+                        <div class="destination-item">
+                            <div class="destination-rank">3</div>
+                            <div class="destination-info">
+                                <span class="destination-name">Amador Causeway</span>
+                                <span class="destination-count">654 visits</span>
+                            </div>
+                            <div class="destination-trend">
+                                <i class="fas fa-arrow-down"></i>
+                                <span>-3%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Peak Hours</h3>
+                    </div>
+                    <div class="peak-hours-chart">
+                        <div class="hour-bar" style="height: 60%">
+                            <span class="hour-label">10 AM</span>
+                        </div>
+                        <div class="hour-bar" style="height: 80%">
+                            <span class="hour-label">11 AM</span>
+                        </div>
+                        <div class="hour-bar" style="height: 100%">
+                            <span class="hour-label">12 PM</span>
+                        </div>
+                        <div class="hour-bar" style="height: 90%">
+                            <span class="hour-label">1 PM</span>
+                        </div>
+                        <div class="hour-bar" style="height: 70%">
+                            <span class="hour-label">2 PM</span>
+                        </div>
+                        <div class="hour-bar" style="height: 85%">
+                            <span class="hour-label">3 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analytics Section -->
+    <section id="analytics" class="analytics page-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Advanced Analytics</h2>
+                <p>Deep insights into tourism patterns and trends</p>
+            </div>
+            <div class="analytics-content">
+                <div class="analytics-card">
+                    <div class="analytics-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3>Route Analysis</h3>
+                    <p>Analyze popular routes taken by tourists from Tocumen Airport to various destinations across Panama City.</p>
+                </div>
+                <div class="analytics-card">
+                    <div class="analytics-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Seasonal Trends</h3>
+                    <p>Identify peak tourism seasons and predict future patterns based on historical data analysis.</p>
+                </div>
+                <div class="analytics-card">
+                    <div class="analytics-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Tourist Segmentation</h3>
+                    <p>Segment tourists based on movement patterns, duration of stay, and destination preferences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reports Section -->
+    <section id="reports" class="reports page-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Automated Reports</h2>
+                <p>Generate professional reports for stakeholders and clients</p>
+            </div>
+            <div class="reports-content">
+                <div class="reports-card">
+                    <div class="reports-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>Weekly Summary</h3>
+                    <p>Get automated weekly reports with key insights and trends delivered to your inbox.</p>
+                    <button class="btn-primary">Generate Report</button>
+                </div>
+                <div class="reports-card">
+                    <div class="reports-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Custom Reports</h3>
+                    <p>Create custom reports with specific metrics and time ranges tailored to your needs.</p>
+                    <button class="btn-primary">Create Custom</button>
+                </div>
+                <div class="reports-card">
+                    <div class="reports-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <h3>Export Data</h3>
+                    <p>Download raw data in CSV format or export visualizations as high-quality images.</p>
+                    <button class="btn-primary">Export Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Upload Section -->
+    <section id="data" class="data-upload page-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Upload Your Data</h2>
+                <p>Process taxi trip data and generate insights instantly</p>
+            </div>
+            <div class="upload-container">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-content">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <h3>Drop your CSV file here</h3>
+                        <p>or <span class="upload-link">browse files</span></p>
+                        <div class="upload-formats">
+                            <span>Supported formats: CSV, Excel</span>
+                        </div>
+                    </div>
+                    <input type="file" id="data-file" accept=".csv,.xlsx" style="display: none;">
+                </div>
+                <p id="upload-status" style="text-align: center; margin-top: 20px; color: #64748b; font-size: 0.9rem;"></p>
+                <div class="upload-instructions">
+                    <h4>Data Format Requirements</h4>
+                    <ul>
+                        <li>Origin coordinates (latitude, longitude)</li>
+                        <li>Destination coordinates (latitude, longitude)</li>
+                        <li>Trip timestamp</li>
+                        <li>Duration in minutes</li>
+                        <li>Distance in kilometers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Tourism Data?</h2>
+                <p>Join hotels, malls, and tourism organizations already using OnAds to optimize their strategies.</p>
+                <div class="cta-actions">
+                    <button class="btn-primary btn-large">Start Free Trial</button>
+                    <button class="btn-outline btn-large">Schedule Demo</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <span>OnAds Tourism Insights</span>
+                    </div>
+                    <p>Transforming tourism data into actionable business intelligence.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#api">API</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#security">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 OnAds Tourism Insights. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
