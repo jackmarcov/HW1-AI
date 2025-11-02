@@ -1,4 +1,7 @@
-/* Reset and Base Styles */
+/* ========================================
+   Global
+   ======================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +21,10 @@ body {
     padding: 0 20px;
 }
 
-/* Navigation */
+/* ========================================
+   Navbar
+   ======================================== */
+
 .navbar {
     background: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -85,7 +91,10 @@ body {
     gap: 15px;
 }
 
-/* Buttons */
+/* ========================================
+   Buttons
+   ======================================== */
+
 .btn-primary, .btn-secondary, .btn-outline {
     padding: 10px 20px;
     border-radius: 8px;
@@ -133,6 +142,10 @@ body {
     padding: 15px 30px;
     font-size: 1.1rem;
 }
+
+/* ========================================
+   Layout / Sections
+   ======================================== */
 
 /* Hero Section */
 .hero {
@@ -515,6 +528,14 @@ body {
     min-height: 20px;
 }
 
+/* Initial demo heights for hour bars (will be overridden by JavaScript) */
+.peak-hours-chart .hour-bar:nth-child(1) { height: 60%; }
+.peak-hours-chart .hour-bar:nth-child(2) { height: 80%; }
+.peak-hours-chart .hour-bar:nth-child(3) { height: 100%; }
+.peak-hours-chart .hour-bar:nth-child(4) { height: 90%; }
+.peak-hours-chart .hour-bar:nth-child(5) { height: 70%; }
+.peak-hours-chart .hour-bar:nth-child(6) { height: 85%; }
+
 .hour-label {
     position: absolute;
     bottom: -25px;
@@ -660,11 +681,6 @@ body {
     max-width: 1200px;
 }
 
-#upload-status {
-    min-height: 24px;
-    font-weight: 500;
-}
-
 .upload-container {
     max-width: 800px;
     margin: 0 auto;
@@ -750,6 +766,19 @@ body {
     left: 0;
 }
 
+#data-file {
+    display: none;
+}
+
+#upload-status {
+    text-align: center;
+    margin-top: 20px;
+    color: #64748b;
+    font-size: 0.9rem;
+    min-height: 24px;
+    font-weight: 500;
+}
+
 /* CTA Section */
 .cta {
     padding: 80px 0;
@@ -786,64 +815,19 @@ body {
     padding: 60px 0 20px;
 }
 
-.footer-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 40px;
-    margin-bottom: 40px;
-}
-
-.footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.footer-logo i {
-    color: #3b82f6;
-}
-
-.footer-section p {
-    color: #94a3b8;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.footer-section h4 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-.footer-section ul {
-    list-style: none;
-}
-
-.footer-section li {
-    margin-bottom: 10px;
-}
-
-.footer-section a {
-    color: #94a3b8;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-section a:hover {
-    color: white;
-}
-
-.footer-bottom {
-    border-top: 1px solid #334155;
-    padding-top: 20px;
+.footer .container {
     text-align: center;
-    color: #94a3b8;
 }
 
-/* Responsive Design */
+.footer p {
+    color: #94a3b8;
+    margin: 0;
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+
 @media (max-width: 768px) {
     .nav-menu {
         display: none;
@@ -883,11 +867,6 @@ body {
         flex-direction: column;
         align-items: center;
     }
-    
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
 }
 
 @media (max-width: 480px) {
@@ -911,5 +890,3 @@ body {
         padding: 40px 20px;
     }
 }
-
-
