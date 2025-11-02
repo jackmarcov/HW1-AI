@@ -29,61 +29,22 @@
         </div>
     </nav>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1>Transform Tourism Data into Actionable Insights</h1>
-                <p>Analyze real-time GPS data from Panama's airport taxis to understand tourist movement patterns and optimize your business strategy.</p>
-                <div class="hero-actions">
-                    <button class="btn-primary btn-large">Start Free Trial</button>
-                    <button class="btn-outline btn-large">View Demo</button>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number">2.5M+</span>
-                        <span class="stat-label">Annual Tourists</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">95%</span>
-                        <span class="stat-label">Data Accuracy</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">30s</span>
-                        <span class="stat-label">Report Generation</span>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="dashboard-preview">
-                    <div class="preview-header">
-                        <div class="preview-dots">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <span class="preview-title">Tourism Heatmap - Panama City</span>
-                    </div>
-                    <div class="preview-content">
-                        <div class="map-container">
-                            <div class="map-heatmap"></div>
-                            <div class="map-markers">
-                                <div class="marker marker-1"></div>
-                                <div class="marker marker-2"></div>
-                                <div class="marker marker-3"></div>
-                                <div class="marker marker-4"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <header class="hero">
+        <div class="container">
+            <h1>OnAds Tourism Insights</h1>
+            <p>See which zones are really performing.</p>
+            <div class="hero-actions">
+                <a href="#dashboard" class="btn-primary">View Dashboard</a>
+                <button class="btn-secondary">Download Sample CSV</button>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
+    <main>
+
+            <!-- Features Section -->
+        <section class="features">
+            <div class="container">
             <div class="section-header">
                 <h2>Powerful Analytics for Tourism Intelligence</h2>
                 <p>Turn raw GPS data into strategic insights that drive business growth</p>
@@ -132,73 +93,35 @@
                     <p>Anonymized data processing ensures tourist privacy while maintaining analytical value.</p>
                 </div>
             </div>
-        </div>
-    </section>
+            </div>
+        </section>
 
-    <!-- Dashboard Section -->
-    <section id="dashboard" class="dashboard page-section">
-        <div class="container">
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="dashboard page-section">
+            <div class="container">
             <div class="section-header">
-                <h2>Live Tourism Dashboard</h2>
-                <p>Real-time insights into tourist movement patterns</p>
+                <h2>Live zone performance</h2>
+                <p>Track real-time tourist movement and zone analytics</p>
             </div>
             <div class="dashboard-grid">
-                <div class="dashboard-card main-card">
+                <div id="heatmap-card" class="dashboard-card main-card">
                     <div class="card-header">
                         <h3>Tourist Movement Heatmap</h3>
-                        <div class="card-controls">
-                            <select class="time-filter">
-                                <option>Last 24 Hours</option>
-                                <option>Last 7 Days</option>
-                                <option>Last 30 Days</option>
-                            </select>
+                        <div class="filters">
+                            <span>Range:</span>
+                            <button class="time-filter active" data-range="24h">Last 24 hours</button>
+                            <button class="time-filter" data-range="7d">Last 7 days</button>
+                            <button class="time-filter" data-range="30d">Last 30 days</button>
                         </div>
                     </div>
-                    <div class="map-container">
-                        <div class="map-placeholder">
-                            <i class="fas fa-map"></i>
-                            <p>Interactive heatmap will load here</p>
-                        </div>
+                    <div id="heatmap-body" class="map-container">
                     </div>
                 </div>
                 <div class="dashboard-card">
                     <div class="card-header">
                         <h3>Top Destinations</h3>
                     </div>
-                    <div class="destinations-list">
-                        <div class="destination-item">
-                            <div class="destination-rank">1</div>
-                            <div class="destination-info">
-                                <span class="destination-name">Casco Viejo</span>
-                                <span class="destination-count">1,247 visits</span>
-                            </div>
-                            <div class="destination-trend">
-                                <i class="fas fa-arrow-up"></i>
-                                <span>+12%</span>
-                            </div>
-                        </div>
-                        <div class="destination-item">
-                            <div class="destination-rank">2</div>
-                            <div class="destination-info">
-                                <span class="destination-name">Multiplaza Mall</span>
-                                <span class="destination-count">892 visits</span>
-                            </div>
-                            <div class="destination-trend">
-                                <i class="fas fa-arrow-up"></i>
-                                <span>+8%</span>
-                            </div>
-                        </div>
-                        <div class="destination-item">
-                            <div class="destination-rank">3</div>
-                            <div class="destination-info">
-                                <span class="destination-name">Amador Causeway</span>
-                                <span class="destination-count">654 visits</span>
-                            </div>
-                            <div class="destination-trend">
-                                <i class="fas fa-arrow-down"></i>
-                                <span>-3%</span>
-                            </div>
-                        </div>
+                    <div id="top-destinations-list" class="destinations-list">
                     </div>
                 </div>
                 <div class="dashboard-card">
@@ -206,36 +129,19 @@
                         <h3>Peak Hours</h3>
                     </div>
                     <div class="peak-hours-chart">
-                        <div class="hour-bar">
-                            <span class="hour-label">10 AM</span>
-                        </div>
-                        <div class="hour-bar">
-                            <span class="hour-label">11 AM</span>
-                        </div>
-                        <div class="hour-bar">
-                            <span class="hour-label">12 PM</span>
-                        </div>
-                        <div class="hour-bar">
-                            <span class="hour-label">1 PM</span>
-                        </div>
-                        <div class="hour-bar">
-                            <span class="hour-label">2 PM</span>
-                        </div>
-                        <div class="hour-bar">
-                            <span class="hour-label">3 PM</span>
-                        </div>
+                        <div id="peak-hours-bars"></div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+            </div>
+        </section>
 
-    <!-- Analytics Section -->
-    <section id="analytics" class="analytics page-section">
-        <div class="container">
+        <!-- Analytics Section -->
+        <section id="analytics" class="analytics page-section">
+            <div class="container">
             <div class="section-header">
-                <h2>Advanced Analytics</h2>
-                <p>Deep insights into tourism patterns and trends</p>
+                <h2>Compare heat levels across locations</h2>
+                <p>Analyze tourist density and movement patterns across Panama City</p>
             </div>
             <div class="analytics-content">
                 <div class="analytics-card">
@@ -260,15 +166,15 @@
                     <p>Segment tourists based on movement patterns, duration of stay, and destination preferences.</p>
                 </div>
             </div>
-        </div>
-    </section>
+            </div>
+        </section>
 
-    <!-- Reports Section -->
-    <section id="reports" class="reports page-section">
-        <div class="container">
+        <!-- Reports Section -->
+        <section id="reports" class="reports page-section">
+            <div class="container">
             <div class="section-header">
-                <h2>Automated Reports</h2>
-                <p>Generate professional reports for stakeholders and clients</p>
+                <h2>Exportable insights for clients</h2>
+                <p>Generate professional reports and exportable data for stakeholders</p>
             </div>
             <div class="reports-content">
                 <div class="reports-card">
@@ -296,15 +202,15 @@
                     <button class="btn-primary">Export Now</button>
                 </div>
             </div>
-        </div>
-    </section>
+            </div>
+        </section>
 
-    <!-- Data Upload Section -->
-    <section id="data" class="data-upload page-section">
-        <div class="container">
+        <!-- Data Upload Section -->
+        <section id="data" class="data-upload page-section">
+            <div class="container">
             <div class="section-header">
-                <h2>Upload Your Data</h2>
-                <p>Process taxi trip data and generate insights instantly</p>
+                <h2>Upload raw mobility/tourism data</h2>
+                <p>Import CSV files and process taxi trip data to generate actionable insights</p>
             </div>
             <div class="upload-container">
                 <div class="upload-area" id="uploadArea">
@@ -330,8 +236,8 @@
                     </ul>
                 </div>
             </div>
-        </div>
-    </section>
+            </div>
+        </section>
 
         <!-- CTA Section -->
         <section class="cta">
@@ -357,5 +263,6 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
